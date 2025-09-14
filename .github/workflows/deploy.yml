@@ -39,7 +39,11 @@ jobs:
         run: npm install
       - name: Build
         run: |
+          echo "Current directory contents:"
+          ls -la
+          echo "Starting build process..."
           npm run build
+          echo "Build completed. Checking dist directory:"
           ls -la dist/
       - name: Setup Pages
         uses: actions/configure-pages@v3
